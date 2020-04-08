@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% set pageTitle = "Casa Criativa: ideias para a crise" %}
+
+{% block content %}
+
+<section id="intro">
+
+    <header>
+        <img src="/logo.png" alt="Logo">
+    </header>
+
+    <main>
+        <p>Ficar em casa em períodos longos não é nada fácil.</p>
+        <p>
+            Por isso iremos catalogar ideias de <strong>brincadeiras</strong>, <strong>jogos</strong>, <strong>filmes</strong>, 
+            <strong>livros</strong>, <strong>cursos</strong> e tudo o que for necessário para tornar esse momento
+            mais interessante.
+        </p>
+        <p>
+            Comece clicando em <strong>ver ideias</strong> para ver as ideias cadastradas e 
+            contribua <strong>adicionando a sua ideia</strong>.
+        </p>
+    </main>
+
+    <section id="buttons">
+        <button onclick="onOff()">+ Adicionar Ideia</button>
+        <a href="/ideias" class="button">Ver Ideias</a>
+    </section>  
+
+    <footer id="footer">
+        <p>
+            &copy; <a href="http://www.creativeideias.com.br/" target="_blank">Creative Ideas</a>
+        </p>
+    </footer>
+
+</section>
+
+<section id="last-ideas">
+
+    {% include "all_ideas.html" %}
+
+</section>
+
+{% endblock %}
